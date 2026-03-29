@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="">
-	<title>LOH SU TING | Profolio | </title>
+	<meta name="description" content="Academic record and grades of Loh Su Ting, Year 2 Software Engineering.">
+	<title>LOH SU TING | Profolio | Academic Record</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="project.html">My Project</a></li>
+            <li><a href="projects.html">My Project</a></li>
             <li><a href="academic.html">Academic Record</a></li>
             <li><a href="contact.html">Contact Me</a></li>
         </ul>
@@ -26,7 +26,106 @@
 
 	<main>
 		<section>
-			
+			<h2>Academic Record</h2>
+			<!--table: thead, tbody, tfoot-->
+			<!--using thead and tfoot enable when printing, tbody too long, tbody will be separate and cut, but then thead and tbody still remaining and printing-->
+            <table border="1" cellpadding="8" cellspacing="0">
+            	<!--border: size of line-->
+            	<!--cellpadding: whitespace between words and line-->
+            	<!--cellspacing: distance between two boxes, set to 0 so became a table-->
+                <caption>Year 2 Academic Results — Semester 1 & 2</caption>
+
+                <thead>
+                    <tr><!--table row-->
+                    	<!--table header: bold & center, using with scope="col/row" to tell machine I am the head-->
+                        <th scope="col" colspan="2">Semester 1 & 2</th>
+                        <!--colspan="2": merge 2 columns-->
+                        <th scope="col" rowspan="2">Credits</th>
+                        <th scope="col" rowspan="2">Grade</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">Semester</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Data Structure & Algorithm</th>
+                        <td rowspan="6">Semester 1</td>
+                        <!--rowspan="6": merge 6 rows-->
+                        <td>3</td>
+                        <!--table data: normal-->
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Software Requirements Engineering</th>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Software Process & Project Management</th>
+                        <td>3</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Human Computer Interaction Fundamentals</th>
+                        <td>3</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Operating Systems</th>
+                        <td>3</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trekking</th>
+                        <td>2</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Software Design & Architecture</th>
+                        <td rowspan="6">Semester 2</td>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Application Development Project 1</th>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cross‑Platform Application Development</th>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Business Intelligence</th>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Professional Communication Skills 1</th>
+                        <td>2</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Philosophy & Current Issues</th>
+                        <td>2</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total Credits Earned</strong></td>
+                        <td><strong>33</strong></td>
+                        <!--this cannot calculate through algorithms in pure html-->
+                        <td>—</td>
+                    </tr>
+                </tfoot>
+
+            </table>
 		</section>
 	</main>
 

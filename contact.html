@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="">
-	<title>LOH SU TING | Profolio | </title>
+	<meta name="description" content="Contact Loh Su Ting — send a message via the form.">
+	<title>LOH SU TING | Profolio | Contact Me</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="project.html">My Project</a></li>
+            <li><a href="projects.html">My Project</a></li>
             <li><a href="academic.html">Academic Record</a></li>
             <li><a href="contact.html">Contact Me</a></li>
         </ul>
@@ -26,7 +26,128 @@
 
 	<main>
 		<section>
-			
+			<h2>Contact Me</h2>
+            <form action="#" method="post">
+                <!--action: place to receive respond, #=current page, click submit page just refresh-->
+                <fieldset>
+                    <!--<fieldset>: border-->
+                    <legend>Send a Message</legend>
+                    <!--<legend>: title on the border-->
+
+                    <!-- Text input -->
+                    <div>
+                        <!--link Full Name with input place, increase clickable place-->
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname"
+                               style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+                               placeholder="Your full name"
+                               required maxlength="60">
+                    </div>
+
+                    <!-- Email input -->
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"
+                               style="border: 1px solid #ccc; background-color: #f9f9f9;"
+                               placeholder="example@domain.com"
+                               required>
+                    </div>
+
+                    <!-- Tel input -->
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone"
+                               style="border: 1px solid #888; padding: 5px;"
+                               placeholder="+60 12 3456789">
+                    </div>
+
+                    <!-- Number input with min/max -->
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age"
+                               style="background-color: #eef;"
+                               min="18" max="100"
+                               placeholder="e.g., 22">
+                    </div>
+
+                    <!-- Date input -->
+                    <div>
+                        <label for="date">Preferred Contact Date:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <!-- Range input (satisfaction) -->
+                    <div>
+                        <label for="satisfaction">Satisfaction Level (0–10):</label>
+                        <input type="range" id="satisfaction" name="satisfaction"
+                               min="0" max="10">
+                    </div>
+
+                    <!-- Textarea -->
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" cols="40"
+                                  style="border: 1px solid #333; padding: 6px; font-size: 14px;"
+                                  placeholder="Your message here..."
+                                  maxlength="500"></textarea>
+                    </div>
+
+                    <!-- Select with optgroup -->
+                    <div>
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject">
+                            <optgroup label="General">
+                                <!--general became unclickable,just showing categories-->
+                                <option value="feedback">Feedback</option>
+                                <option value="question">Question</option>
+                            </optgroup>
+                            <optgroup label="Project Related">
+                                <option value="collab">Collaboration</option>
+                                <option value="hire">Hire Me</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Checkboxes (at least 3) -->
+                    <fieldset>
+                        <legend>Interests (check all that apply)</legend>
+                        <div>
+                            <input type="checkbox" id="interest1" name="interests" value="webdev">
+                            <label for="interest1">Web Development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest2" name="interests" value="java">
+                            <label for="interest2">Java Programming</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest3" name="interests" value="database">
+                            <label for="interest3">Database Design</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Radio buttons (at least 3) -->
+                    <fieldset>
+                        <legend>How did you hear about me?</legend>
+                        <div>
+                            <input type="radio" id="hear1" name="hear_about" value="linkedin">
+                            <label for="hear1">LinkedIn</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="hear2" name="hear_about" value="github">
+                            <label for="hear2">GitHub</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="hear3" name="hear_about" value="friend">
+                            <label for="hear3">Friend/Colleague</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit button with inline style -->
+                    <div>
+                        <button type="submit" style="background-color: #4CAF50; color: white; padding: 8px 16px; border: none; font-size: 16px;">Send Message</button>
+                    </div>
+                </fieldset>
+            </form>
 		</section>
 	</main>
 
