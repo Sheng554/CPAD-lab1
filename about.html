@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="About Loh Su Ting - a software engineering student in UTM Skudai">
+	<title>LOH SU TING | Portfolio | About Me</title>
+</head>
+
+<body>
+	<header>
+		<h1>LOH SU TING</h1>
+        <p>System booting...   ~Software Engineering student. Constantly debugging my code and compiling a better version of myself.</p>
+	</header>
+
+	<nav>
+		<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="project.html">My Project</a></li>
+            <li><a href="academic.html">Academic Record</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+
+        <!--<ul>: unorder list, adding bullet point, must use together with <li>, big container-->
+
+        <!--<li>: container to put the item-->
+
+        <!--<a href=""> : anchor represents a link, href refer to destination, # variable id-->
+
+	</nav>
+
+	<main>
+		<section>
+			<h2>About Me</h2>
+            <h3>MySelf</h3>
+            <h4>My Journey</h4>
+
+            <figure>
+                <!-- 
+                    The align attribute is deprecated in HTML5. 
+                    It was used to float images.
+                    Modern CSS should use float: right;.
+                -->
+                <img src="image/ProfileHalf.jpg" 
+                     alt="Loh Su Ting half body picture." 
+                     width="180" 
+                     height="220" 
+                     title="My profile photo – coding mode off" 
+                     align="right">
+                <figcaption>Figure 1: Me enjoying a sunny day.</figcaption>
+            </figure>
+
+            <!--alt = alternative text, plan b when picture no show, accessibility, read by the machine-->
+
+            <!--title show when hover on the picture-->
+
+            <!--Figcaption separate with the figure due to the use of align="right",since cannot use css so cannot solve it-->
+
+            <p>
+                Hello guys~ <br>
+
+
+                <!--<strong> & <em> = semantic (importance / emphasis) → used for meaning, conveys importance to screen readers
+                <b> & <i> = purely visual (bold / italic) → used for styling only-->
+
+                My name is <strong>LOH SU TING</strong>, a year 2 <em>Software Engineering</em> student who studies at UTM.<br> 
+                Dealing with code, play with <abbr title="HyperText Markup Language">HTML</abbr>, manipulate different variables and algorithms to turn complex problems into elegant solutions are my daily life. 
+                Sometimes it makes me <i>confused</i>, <b>distressed</b>, <i>struggling</i> in the swamp of code, but it also brings me a sense of achievement when I overcome it. 
+                Thus, I stay aligned with
+
+                <!--<blockquote>: occupies one line by adding right & left distance(middle), quote means using from other words-->
+
+                <!--cite = “”:source, only see but machine, so seaching engine know the author didnot copy paste others-->
+
+                <!--<cite>:show title, name of author, became italic-->
+
+                <blockquote cite="https://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast">
+                    <p>Make it work, make it right, make it fast</p>
+                    <footer><cite>Kent Beck</cite></footer>
+                </blockquote>
+                when I code.
+            </p>
+
+            <h4>My Spiritual Nourishment</h4>
+            <p>
+                To survive in running code, I run on C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> (caffeine) and O<sub>2</sub> (oxygen) for my daily life. 
+                My favourite formula, E = mc<sup>2</sup> reminds me that even a small amount of passion can release enormous energy.
+            </p>
+
+            <h3>Learning Path</h3>
+            <p>
+                I'm currently familiar with <b><abbr title="C Plus Plus">CPP</abbr></b>, <b>JAVA</b>, <b><abbr title="My Structured Query Language">MySQL</abbr></b> and now on the way learning <dfn>HTML</dfn>, the standard markup language used to create and structure web pages and content for display in a web browser. I will keep working hard to <mark>compile a better version of myself</mark>.
+            </p>
+
+            <figure>
+                <img src="image/ProfileFull.jpg" 
+                     alt="Loh Su Ting smiling" 
+                     width="180" 
+                     height="220">
+                <figcaption>Figure 2: Red lanterns for good luck, because my Java project definitely needs it.</figcaption>
+            </figure>
+
+            <h3>Beyond the Keyboard</h3>
+            <p>
+                My brain can't run on high CPU usage forever. To clear my cache, I love immersing myself in TV dramas or just enjoying slow, cozy family time. It's the best way to debug my daily stress.
+            </p>
+            <p>
+                Beyond that, I am an adventurer at heart. I constantly seek out new things to challenge myself. Because exploring the unknown in real life is just as exciting as successfully running a new piece of code on the first try.
+            </p>
+		</section>
+	</main>
+
+	<footer>
+		<address>
+			📧 lohsuting1@gmail.com<br>
+            📍 Batu 6, Jalan Kluang, 83000, Batu Pahat, Johor<br>
+            📞 +60165563063
+		</address>
+
+		<!--although <p>, <div>,<span> can achieve the same effect showing the content but it cannot notify the machine or screenreader that it is the contact method (consider accessibility) some browser will treat different between <p> and <address>-->
+        <p><small>@ 2026 Loh Su Ting.</small></p>
+			
+	</footer>
+	
+    <!--<p>：paragraph, have margin(white space above and below)-->
+
+    <!--<div>:block-level,will occupies one line,cannot use inside <p>-->
+
+    <!--<span>:a flexible container,can use inside <p>-->
+
+</body>
