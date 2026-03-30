@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@300;400;700&display=swap')
+/*url can get from google fonts, like shopping, choose ur prefer word, display=swap show default fonts when internet slow*/
+
+/*Custom Properties, material library, --(variable define ourself)*/
+:root {
+	--color-primary:#1e3c5c;
+	--color-secondary:#2c5a2e;
+	--color-accent-1:#e8b86b;
+	--color-accent-2:#b87333;
+
+	--color-gray-100:#f8f9fa;
+	--color-gray-300:#dee2e6;
+	--color-gray-700:#495057;
+
+	--font-body:'Roboto Condensed', sans-serif;
+	--font-heading:'Playfair Display', serif;
+    /*sans-serif & serif use when system down*/
+
+	--space-xs:0.5rem;
+	--space-sm:1rem;
+	--space-md:2rem;
+	--space-lg:4rem;
+	--space-xl:8rem;
+
+	--color-text:var(--color-gray-700);
+	--color-bg:#ffffff;
+}
+
+html{
+	box-sizing:border-box;
+	font-size:62.5%;
+	/*browser default is 16px, use 62.5% = 10px, so the rest conversion is 1.6rem = 10px)*/
+}
+
+/* Make all elements inherit box-sizing. 
+   Using 'inherit' instead of 'border-box' protects 3rd-party plugins that might still rely on 'content-box'. */
+*,*::before,*::after{
+	box-sizing:inherit;
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family:var(--font-body);
+	font-size:1.6rem;
+	line-height:1.5;
+	color:var(--color-text);
+	background-color:var(--color-bg);
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:var(--font-heading);
+	font-weight:700;
+	line-height:1.2;
+	color:var(--color-primary);
+	margin-top:var(--space-sm);
+	margin-bottom:var(--space-xs);
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    border-bottom: 2px solid var(--color-accent-1);
+    display: inline-block;
+    /*h2 is block variable, just use border-bottom the line is long so use display: inline-block to control length*/
+    padding-bottom: 0.25rem;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent-2);
+    text-decoration: underline;
+}
