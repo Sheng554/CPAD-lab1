@@ -163,11 +163,23 @@ header {
 
 nav {
     background-color: var(--color-nav-bg);
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
     color: var(--color-gray-100);
+    /*sticky nav, logo*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
 }
 
 nav ul {
+    display: flex;
+    flex-wrap: wrap;/*change line*/
+    gap: var(--space-md);
     margin: 0;
     padding: 0;
     list-style: none;
