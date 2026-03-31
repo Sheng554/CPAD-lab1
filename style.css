@@ -1,4 +1,11 @@
-/*============================================
+/* ============================================
+ BREAKPOINTS
+ mobile-first base: 320px and up (default)
+ tablet: @media (min-width: 600px)
+ desktop: @media (min-width: 1024px)
+ ============================================ */
+
+ /*============================================
   Task 1: CSS Architecture & Custom Properties
   ============================================*/
 
@@ -156,15 +163,19 @@ caption {
 /* --- Landmark Styling with Box Model --- */
 header {
     display: flex;
-    align-items: center;        
-    justify-content: space-between;/*content become left & right*/
-    flex-wrap: wrap;
+    align-items: center; 
+    text-align: center;
+    /*Task4      
+    justify-content: space-between;=content become left & right
+    flex-wrap: wrap;*/
     gap: var(--space-md);
     background-color: var(--color-header-bg);
     /* 1. Used padding to create inner breathing room around the content. Margin is 0 to stay flush with the top of the viewport. */
     padding: var(--space-md) var(--space-lg);
     color: var(--color-primary);
     border-bottom: 1px solid var(--color-gray-300);
+    /*Task 5*/
+    flex-direction: column;/*mobile*/
 }
 /*To achieve hero header,html file header need to use div and class so became two block*/
 
@@ -209,13 +220,15 @@ nav {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;/*change line*/
+    /*Task4:flex-wrap: wrap;change line*/
     gap: var(--space-xs);
     margin: 0;
     padding: 0;
     list-style: none;
     align-items: center;
     /*align-items better because different size of logo,text-align: center;limited effect*/
+    /*Task 5*/
+    flex-direction: column;/*from above to below*/
 }
 
 nav li {
@@ -400,7 +413,8 @@ label {
 /*brain,control how many card*/
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
+    /*Task 4 version:grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));*/
     /*min 260, auto fit calculate how many cards, no enough then next line,1fr equal size*/
     gap: var(--space-md);
     margin-top: var(--space-md);
@@ -449,7 +463,9 @@ label {
 /*One big box(div) content two small box(div-maincontent & aside-sidebar)*/
 .two-column-layout {
     display: grid;/*follow grid rule*/
-    grid-template-columns: 1fr 280px;/*1fr=main content, 280px= sidebar*/
+    grid-template-columns: 1fr;
+    /*Task4:grid-template-columns: 1fr 280px;*/
+    /*1fr=main content, 280px= sidebar*/
     gap: var(--space-lg);/*gap between left & right*/
 }
 
@@ -499,7 +515,7 @@ label {
 
 /*grid-column: 1 / -1;  1 represent the most left and -1 represent the most right*/
 .featured-card {
-    grid-column: span 2;
+    /*Task 4 grid-column: span 2;*/
     background-color: var(--color-accent-1);
     color: var(--color-primary);
     text-align: center;
@@ -507,4 +523,52 @@ label {
 
 .featured-card h3 {
     color: var(--color-primary);
+}
+
+/*============================================
+  Task 5: Responsive Design with Media Queries
+  ============================================*/
+
+/*============================================
+  Tablet: 600px and up
+  ============================================ */
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;/*from left to right*/
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: var(--space-md);
+        flex-wrap: wrap;
+    }
+
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card {
+    grid-column: span 2;
+    }
+}
+
+/*============================================
+  Desktop: 1024px and up
+  ============================================ */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .two-column-layout {
+        grid-template-columns: 1fr 280px;
+    }
 }
