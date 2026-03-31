@@ -418,7 +418,7 @@ label {
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -495,4 +495,16 @@ label {
     padding-left: var(--space-md);
     padding-right: var(--space-md);
     text-decoration: underline;
+}
+
+/*grid-column: 1 / -1;  1 represent the most left and -1 represent the most right*/
+.featured-card {
+    grid-column: span 2;
+    background-color: var(--color-accent-1);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.featured-card h3 {
+    color: var(--color-primary);
 }
