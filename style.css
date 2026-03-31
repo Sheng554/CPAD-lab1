@@ -154,16 +154,40 @@ caption {
 
 /* --- Landmark Styling with Box Model --- */
 header {
+    display: flex;
+    align-items: center;        
+    justify-content: space-between;/*content become left & right*/
+    flex-wrap: wrap;
+    gap: var(--space-md);
     background-color: var(--color-header-bg);
     /* 1. Used padding to create inner breathing room around the content. Margin is 0 to stay flush with the top of the viewport. */
     padding: var(--space-md) var(--space-lg);
     color: var(--color-primary);
     border-bottom: 1px solid var(--color-gray-300);
 }
+/*To achieve hero header,html file header need to use div and class so became two block*/
+
+.header-text {
+    flex: 1;/*let word occupies the left space*/                
+    min-width: 200px;/*when screen less than 200px, the picture will go down below word*/
+}
+
+.header-image {
+    flex-shrink: 0;/*constant image size*/
+    width: 180px;
+    text-align: center;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: var(--shadow-sm);
+}
 
 nav {
     background-color: var(--color-nav-bg);
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-xs) var(--space-md);
     color: var(--color-gray-100);
     /*sticky nav, logo*/
     position: sticky;
@@ -173,17 +197,24 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+}
+
+.nav-logo {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;/*change line*/
-    gap: var(--space-md);
+    gap: var(--space-xs);
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: center;
+    align-items: center;
+    /*align-items better because different size of logo,text-align: center;limited effect*/
 }
 
 nav li {
@@ -196,9 +227,24 @@ nav a {
     text-decoration: none;
     padding: var(--space-xs) var(--space-sm);
     border-radius: 4px;
+    transition: color 0.2s, background-color 0.2s; /*slow motion of color change*/
 }
 
 nav a:hover {
+    background-color: var(--color-accent-1);
+    color: var(--color-primary);
+}
+
+/*html file need to add active condition*/
+nav a.active {
+    font-weight:700;
+    border-bottom: 3px solid var(--color-accent-1);
+    background-color: transparent;
+    color: var(--color-gray-100);
+    letter-spacing: 0.05rem;
+}
+
+nav a.active:hover {
     background-color: var(--color-accent-1);
     color: var(--color-primary);
 }
@@ -285,7 +331,7 @@ a:hover {
 }
 
 a:active {
-    color: var(--color-primary);
+    color: var(--color-accent-1);
     text-decoration: underline;
 }
 
