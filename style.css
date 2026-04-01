@@ -654,7 +654,7 @@ blockquote::after {
     content: "”";
     font-size: 4rem;
     position: absolute;
-    bottom: -2rem;
+    bottom: -0.2rem;
     right: var(--space-xs);
     color: var(--color-accent-1);
     font-family: var(--font-heading);
